@@ -1,0 +1,145 @@
+.note-editor {
+  background: var(--bg-primary, #fff);
+  color: var(--text-primary, #282c34);
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2.2rem 2.2rem 2.2rem;
+  height: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  transition: background 0.2s;
+  border: none;
+}
+
+.note-editor-header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.note-title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: var(--primary, #3498db);
+}
+
+.note-title-input {
+  font-size: 1.25rem;
+  padding: 0.4em 0.8em;
+  border-radius: 7px;
+  border: 1px solid #dde4ec;
+  background: #f5fafd;
+  color: #282c34;
+  font-weight: 700;
+  width: 100%;
+  max-width: 350px;
+  outline: none;
+  margin-bottom: 0.3rem;
+  transition: box-shadow 0.13s;
+}
+.note-title-input:focus {
+  box-shadow: 0 0 4px 0 #3498db66;
+}
+
+.note-editor-actions {
+  display: flex;
+  gap: 0.65rem;
+  align-items: center;
+}
+
+.editor-btn {
+  appearance: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.37em 1.2em;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.13s, box-shadow 0.13s;
+}
+
+.editor-btn.primary {
+  background: var(--primary, #3498db);
+  color: #fff;
+}
+.editor-btn.primary:hover {
+  background: #217dc8;
+}
+.editor-btn.secondary {
+  background: var(--secondary, #2ecc71);
+  color: #fff;
+}
+.editor-btn.secondary:hover {
+  background: #21ad60;
+}
+.editor-btn.accent {
+  background: var(--accent, #e67e22);
+  color: #fff;
+}
+.editor-btn.accent:hover {
+  background: #f57d1c;
+}
+
+.note-editor-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-content-input {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  width: 100%;
+  min-height: 200px;
+  max-height: 50vh;
+  border-radius: 7px;
+  border: 1px solid #dde4ec;
+  resize: vertical;
+  padding: 1em;
+  background: #fcfcfc;
+  color: #222;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: box-shadow 0.13s;
+}
+.note-content-input:focus {
+  box-shadow: 0 0 4px 0 #2ecc7177;
+}
+
+.note-content {
+  white-space: pre-wrap;
+  padding: 1em 0.15em;
+  font-size: 1.07rem;
+}
+
+.note-editor-empty {
+  opacity: 0.57;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  font-size: 1.12rem;
+}
+
+@media (max-width: 700px) {
+  .note-editor {
+    padding: 1rem 0.5rem 1.5rem 0.5rem;
+    min-height: 250px;
+  }
+  .note-editor-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
